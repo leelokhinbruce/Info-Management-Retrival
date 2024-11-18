@@ -1,3 +1,4 @@
+-- Create Tables
 -- User
 CREATE TABLE [CW1].[User] (
   user_id UNIQUEIDENTIFIER PRIMARY KEY,
@@ -63,3 +64,35 @@ CREATE TABLE [CW1].[User Favority Activity] (
   CONSTRAINT fk_user_fav_activity FOREIGN KEY (user_id) REFERENCES [CW1].[User](user_id),
   CONSTRAINT fk_activity FOREIGN KEY (activity_id) REFERENCES [CW1].[Activity](activity_id)
 );
+
+
+
+-- Insert Values
+-- Activity's values
+INSERT INTO [CW1].[Activity] VALUES
+('Backpacking'),
+('Bike touring'),
+('Birding'),
+('Camping'),
+('Cross-country skiing'),
+('Fishing'),
+('Hiking'),
+('Horseback riding'),
+('Mountain biking'),
+('Off-road driving'),
+('Paddle sports'),
+('Road biking'),
+('Rock climbing'),
+('Running'),
+('Scenic driving'),
+('Skiing'),
+('Skiing'),
+('Snowsheing'),
+('Via ferrata'),
+('Walking');
+
+-- Language's values
+INSERT INTO [CW1].[Language] VALUES
+('English'),
+(N'中文 (繁體)'),
+(N'中文 (簡體)');
